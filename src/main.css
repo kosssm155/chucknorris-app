@@ -1,0 +1,15 @@
+@import './components/categories/categories.css';
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(./assets/fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+  font-style: bold;
+}
