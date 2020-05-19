@@ -1,19 +1,28 @@
-// import Filter from '../filter/filter.js';
+export default class Button {
+  constructor() {
+    this.jsonVal = {};
+  }
 
-// export default class Button {
-//   constructor() {}
+  // add event listener to buttor and return fetch object
+  buttonListener(filter) {
+    let getAJokeButton = document.getElementById('submit');
+    getAJokeButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.getJSONData(filter.finalFilterValue).then((data) => {
+        this.jsonVal = data;
+        console.log(this);
+      });
+    });
+  }
 
-//   buttonListener() {
-//     let getAJokeButton = document.getElementById('submit');
-//     getAJokeButton.addEventListener('click', (e) => {
-//       e.preventDefault();
-//       console.log(filter.finalFilterValue);
-//     });
-//   }
-// }
-
-// export let getAJokeButton = document.getElementById('submit');
-// getAJokeButton.addEventListener('click', (e) => {
-//   e.preventDefault();
-//   console.log(filter.finalFilterValue);
-// });
+  // fetch data
+  getJSONData(string) {
+    return fetch(`https://api.chucknorris.io/jokes/${string}`, {}).then((response) => {
+      if (response.status === 200) {
+        return response.json();
+      } else {
+        throw new Error('Unable to fetch data');
+      }
+    });
+  }
+}

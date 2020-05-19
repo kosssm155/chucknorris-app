@@ -1,0 +1,13 @@
+#submit {
+  background: linear-gradient(92.01deg, #8ea7ff 0%, #7291ff 100%);
+  border-radius: 10px;
+  width: 152px;
+  height: 42px;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 500;
+  margin: 5px 0;
+}

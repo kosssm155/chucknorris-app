@@ -56,7 +56,7 @@ export default class Filter {
       radioButtons[i].addEventListener('click', (e) => {
         // if target 'Random'
         if (e.target.tagName === 'INPUT' && e.target.getAttribute('data-radio') === 'random') {
-          this.finalFilterValue = 'random';
+          this.finalFilterValue = `random?category/random`;
 
           if (tabsWrapper.childNodes[0]) {
             tabsWrapper.childNodes[0].style.display = 'none';
@@ -82,14 +82,14 @@ export default class Filter {
 
           // When click 'From category' radio button focus on the first item
           tabsItems[0].focus();
-          this.finalFilterValue = tabsItems[0].getAttribute('data-value');
+          this.finalFilterValue = `random?category=${tabsItems[0].getAttribute('data-value')}`;
 
           tabsItems.forEach((tabList) => {
             tabList.addEventListener('focus', (e) => {
               if (e.target.tagName === 'LI') {
-                this.finalFilterValue = e.target.getAttribute('data-value');
+                this.finalFilterValue = `random?category=${e.target.getAttribute('data-value')}`;
               } else if (e.target.tagName === 'A') {
-                this.finalFilterValue = e.target.getAttribute('data-category-value');
+                this.finalFilterValue = `random?category=${e.target.getAttribute('data-category-value')}`;
               }
             });
           });
@@ -111,7 +111,7 @@ export default class Filter {
           input.focus();
 
           input.addEventListener('keyup', (e) => {
-            this.finalFilterValue = e.target.value;
+            this.finalFilterValue = `search?query=${e.target.value}`;
           });
         }
       });
