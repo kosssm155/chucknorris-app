@@ -19,3 +19,5 @@ getAJokeButton.addEventListener('click', (e) => {
   e.preventDefault();
   console.log(filter.finalFilterValue);
 });
+
+console.log(10);
