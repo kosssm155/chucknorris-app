@@ -1,4 +1,38 @@
+.tabs {
+  margin: 15px 0;
+}
+
+.tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs__list li {
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+
+.tabs__list li:hover,
+.tabs__list li:focus {
+  background: #f8f8f8;
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+}
+
+.tabs__list li:last-child {
+  margin-right: 0px;
+}
+
 .tabs__item {
-  font-family: 'Roboto';
-  font-style: normal;
+  list-style: none;
+  padding: 6px 15px;
+  border: 2px solid #f8f8f8;
+  border-radius: 6px;
+  color: #ababab;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 12px;
 }

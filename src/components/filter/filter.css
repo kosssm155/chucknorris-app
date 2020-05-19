@@ -1,0 +1,11 @@
+#radio-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-button-label {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 18px;
+  margin: 5px 0;
+}

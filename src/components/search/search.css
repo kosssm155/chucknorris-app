@@ -1,0 +1,20 @@
+.search {
+  margin: 15px 0;
+}
+
+.search__input {
+  min-width: 680px;
+  height: 42px;
+  border: 2px solid #333333;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 0 15px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+}
+
+.search__input::placeholder {
+  color: #ababab;
+}

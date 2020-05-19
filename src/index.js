@@ -1,9 +1,21 @@
-import "./main.css";
+// import styles
+import './main.css';
 
-import Categories from "./components/categories/categories.js";
+// import js
+import Categories from './components/categories/categories.js';
+import Filter from './components/filter/filter.js';
 
-let root = document.getElementById("root");
+// root
+let root = document.getElementById('root');
 
-let categories = new Categories(["dev", "celebrities"]);
-console.log(categories.renderTabs());
-root.appendChild(categories.renderTabs());
+// ===== filter create and listen =====
+let filter = new Filter();
+root.appendChild(filter.render());
+filter.listenFilter();
+
+// ===== filter 'Get a joke' button =====
+let getAJokeButton = document.getElementById('submit');
+getAJokeButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(filter.finalFilterValue);
+});
