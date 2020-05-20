@@ -2,6 +2,7 @@
 @import './components/filter/filter.css';
 @import './components/search/search.css';
 @import './components/submit/submit.css';
+@import './components/joke/joke.css';
 
 @font-face {
   font-family: 'Roboto';
@@ -39,25 +40,31 @@
   font-weight: 900;
 }
 
-/* body {
-  background: #e5e5e5;
-} */
+body {
+  margin: 0;
+  padding: 0;
+}
 
 #layout {
   display: flex;
   width: 100%;
 }
 
-#layout > div {
+#layout .layout__left {
   width: 66%;
 }
 
 #layout__favourites {
   background: #f8f8f8;
+  width: 34%;
 }
 
-#layout__filter,
-#layout__jokes {
+#layout__filter {
   width: 70%;
   margin: 0 auto;
+}
+
+#layout__jokes {
+  width: 70%;
+  margin: 30px auto 0 auto;
 }
