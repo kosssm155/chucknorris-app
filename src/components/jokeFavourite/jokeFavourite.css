@@ -1,3 +1,9 @@
+#layout__favourites {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
 /* .joke {
   background-color: #f8f8f8;
   max-width: 100%;

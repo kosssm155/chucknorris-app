@@ -32,7 +32,7 @@ export default class JokeFavourite {
       </div>
     </div>
     <div class="joke__outer">
-      <div class="joke__like ${this.id}"></div>
+      <div class="joke__like ${this.id} heart-active"></div>
       <div class="joke__message"></div>
     </div>
     `;

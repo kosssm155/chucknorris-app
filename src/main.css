@@ -3,6 +3,7 @@
 @import './components/search/search.css';
 @import './components/submit/submit.css';
 @import './components/joke/joke.css';
+@import './components/jokeFavourite/jokeFavourite.css';
 
 @font-face {
   font-family: 'Roboto';
