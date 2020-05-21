@@ -4,6 +4,30 @@
   justify-content: flex-end;
 }
 
+#layout__favourites .joke {
+  background-color: #ffffff;
+  border-radius: 20px;
+  font-style: normal;
+  font-family: Roboto;
+  position: relative;
+  margin: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 83%;
+  margin: 10px auto;
+}
+
+#layout__favourites .joke__message {
+  background-image: url('../../assets/img/message-grey.png');
+}
+
+#layout__favourites .joke__text {
+  font-size: 14px;
+}
+
+#layout__favourites .joke__category {
+  opacity: 0;
+}
+
 /* .joke {
   background-color: #f8f8f8;
   max-width: 100%;

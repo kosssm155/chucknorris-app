@@ -8,6 +8,8 @@ import JokeFavourite from '../jokeFavourite/jokeFavourite.js';
 // 4. Listen when user dislike joke
 // 5. If the user input tha same in search, for example 'data', program have to track already liked jokes
 // 6. Dislike jokes of favourite container
+// 7. Input type='text' is required
+// 8. Value of search input has to be correct
 
 export default class Button {
   constructor() {
@@ -23,12 +25,23 @@ export default class Button {
     let joke;
     let jokeFavourite;
     let layoutJokes = document.getElementById('layout__jokes');
+    // let searchInput = document.getElementById('site-search');
 
     getAJokeButton.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // clear input search when user press Gat a joke button
+      // input type='text' is required
+      if (document.getElementsByClassName('search')[0]) {
+        if (document.getElementsByClassName('search')[0].style.display === 'block') {
+          if (document.getElementById('site-search').value === '') {
+            alert('search text is required');
+            return;
+          }
+        }
+      }
+
       if (document.body.contains(document.getElementById('site-search'))) {
+        // clear input search when user press Get a joke button
         document.getElementById('site-search').value = '';
       }
 
@@ -46,6 +59,11 @@ export default class Button {
         document.getElementById('layout__jokes').innerHTML = '';
         this.jsonValArrOfObjects.forEach((element) => {
           joke = new Joke(element);
+          // Value of search input has to be correct
+          if (joke.value === 'undefined') {
+            alert("Text doest's fit search requirements. Pls type in another search value");
+            return;
+          }
           joke.renderJoke();
         });
 
@@ -105,6 +123,7 @@ export default class Button {
                 }
               });
             }
+            localStorage.setItem('fav', favouriteJokesWrapper.innerHTML);
           });
         });
       });

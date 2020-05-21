@@ -22,7 +22,7 @@ export default class JokeFavourite {
     jokeContainer.className = `joke ${this.id}`;
     jokeContainer.innerHTML = `
     <div class="joke__inner">
-      <p class="joke__id"><span>ID:</span><a href="${this.url}">${this.id}</a></p>
+      <p class="joke__id"><span>ID:</span><a href="${this.url}" target="_blank">${this.id}</a></p>
       <p class="joke__text">
         ${this.value}
       </p>
