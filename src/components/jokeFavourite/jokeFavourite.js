@@ -1,4 +1,4 @@
-export default class Joke {
+export default class JokeFavourite {
   constructor({
     categories = 'undefined',
     created_at = 'undefined',
@@ -20,8 +20,6 @@ export default class Joke {
   renderJoke() {
     let jokeContainer = document.createElement('div');
     jokeContainer.className = `joke ${this.id}`;
-    jokeContainer.id = `${this.id}`;
-
     jokeContainer.innerHTML = `
     <div class="joke__inner">
       <p class="joke__id"><span>ID:</span><a href="${this.url}">${this.id}</a></p>
@@ -39,6 +37,6 @@ export default class Joke {
     </div>
     `;
 
-    document.getElementById('layout__jokes').appendChild(jokeContainer);
+    document.getElementById('layout__favourites').appendChild(jokeContainer);
   }
 }
