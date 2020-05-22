@@ -83,6 +83,13 @@ export default class Button {
         // like/dislike joke
         jokesNodeList.forEach((element) => {
           element.addEventListener('click', (e) => {
+            // remove event listener of favourite jokes
+            let favouriteContainer = document.getElementById('layout__favourites');
+            let favouriteContainerJoke = favouriteContainer.getElementsByClassName('joke');
+            for (let i = 0; i < favouriteContainerJoke.length; i++) {
+              console.log(favouriteContainerJoke[i]);
+            }
+
             // listen dislikes
             if (e.target.classList[2] === 'heart-active') {
               e.target.classList.remove('heart-active');
@@ -99,7 +106,7 @@ export default class Button {
             }
             // render layout__favourites wrapper
             favouriteJokesWrapper.innerHTML = '';
-            // let jokeFavourite;
+
             this.arrayOfFavouriteObjects.forEach((favouriteJoke) => {
               jokeFavourite = new JokeFavourite(favouriteJoke);
               jokeFavourite.renderJoke();
@@ -113,6 +120,7 @@ export default class Button {
                   this.arrayOfFavouriteObjects = this.arrayOfFavouriteObjects.filter((el) => {
                     return el.id !== e.target.classList[1];
                   });
+
                   e.target.parentNode.parentNode.remove();
 
                   let classListToDubble = document.getElementById(e.target.classList[1]);
@@ -121,9 +129,10 @@ export default class Button {
                     classListToDubble.getElementsByClassName('heart-active')[0].classList.remove('heart-active');
                   }
                 }
+                localStorage.setItem('favouriteJokesArray', JSON.stringify(this.arrayOfFavouriteObjects));
               });
             }
-            localStorage.setItem('fav', favouriteJokesWrapper.innerHTML);
+            localStorage.setItem('favouriteJokesArray', JSON.stringify(this.arrayOfFavouriteObjects));
           });
         });
       });
