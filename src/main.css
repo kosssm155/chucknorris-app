@@ -69,3 +69,28 @@ body {
   width: 70%;
   margin: 30px auto 0 auto;
 }
+
+.header {
+  margin: 40px auto;
+  width: 70%;
+  font-family: Roboto;
+}
+
+.header span {
+  font-weight: bold;
+  font-size: 500;
+  font-size: 20px;
+}
+
+.header h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+
+.header h3 {
+  font-weight: 500;
+  font-size: 24px;
+  margin: 15px 0;
+}
