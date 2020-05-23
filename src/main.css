@@ -55,9 +55,21 @@ body {
   width: 66%;
 }
 
-#layout__favourites {
-  background: #f8f8f8;
+#layout__favourites-wr {
   width: 34%;
+  background: #f8f8f8;
+}
+
+#layout__favourites-wr h2 {
+  width: 83%;
+  margin: 40px auto 20px auto;
+  font-family: Roboto;
+  font-weight: 500;
+  color: #ababab;
+}
+
+#layout__favourites {
+  width: 100%;
 }
 
 #layout__filter {
