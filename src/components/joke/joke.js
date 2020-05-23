@@ -24,7 +24,7 @@ export default class Joke {
 
     jokeContainer.innerHTML = `
     <div class="joke__inner">
-      <p class="joke__id"><span>ID:</span><a href="${this.url}" target="_blank">${this.id}</a></p>
+      <p class="joke__id"><span>ID:</span><a href="${this.url}" target="_blank">${this.id} <span class="joke__link-picture"></span></a></p>
       <p class="joke__text">
         ${this.value}
       </p>

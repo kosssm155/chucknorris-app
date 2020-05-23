@@ -81,3 +81,11 @@
   top: 67px;
   left: 40px;
 }
+
+.joke__link-picture {
+  background: url('../../assets/img/link.png');
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 10px;
+  height: 10px;
+}
