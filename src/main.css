@@ -137,6 +137,9 @@ body {
     height: calc(100vh - calc(100vh - 100%));
     margin-bottom: 100vh;
   }
+  #layout__favourites .joke {
+    width: 90%;
+  }
 
   .open {
     background: url('../src/assets/img/open.png');
@@ -201,5 +204,9 @@ body {
 
   .joke__category {
     display: none;
+  }
+
+  #layout__jokes {
+    width: 90%;
   }
 }
