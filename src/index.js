@@ -6,6 +6,7 @@ import JokeFavourite from '../src/components/jokeFavourite/jokeFavourite.js';
 import Filter from './components/filter/filter.js';
 import Button from './components/submit/submit.js';
 import open from './components/open/open.js';
+import close from './components/close/close.js';
 
 // root
 let layoutFilter = document.getElementById('layout__filter');
@@ -46,8 +47,6 @@ for (let i = 0; i < favouriteContainerJoke.length; i++) {
     // console.log(favouriteContainerJoke);
     if (event.target.classList[2] === 'heart-active') {
       // 2. remove joke
-      // console.log(event.target.parentNode.parentNode.remove());
-      // favouriteContainerJoke[i].remove();
       event.target.parentNode.parentNode.remove();
       // 3. remove object with joke from array
       button.arrayOfFavouriteObjects = button.arrayOfFavouriteObjects.filter((favObj) => {
