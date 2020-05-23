@@ -11,7 +11,6 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new MomentLocalesPlugin(),
     new HtmlWebpackPlugin({
       title: 'chucknorris-app',
       template: './src/main.html',

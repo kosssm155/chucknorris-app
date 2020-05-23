@@ -1,3 +1,6 @@
+const moment = require('moment');
+moment().format();
+
 export default class JokeFavourite {
   constructor({
     categories = 'undefined',
@@ -27,7 +30,7 @@ export default class JokeFavourite {
         ${this.value}
       </p>
       <div class="joke__footer">
-        <span class="joke__last-update">Last update: ${this.updated_at}</span>
+        <span class="joke__last-update">Last update: ${this.hoursAgo()} hours ago</span>
         <span class="joke__category">${this.categories}</span>
       </div>
     </div>
@@ -38,5 +41,13 @@ export default class JokeFavourite {
     `;
 
     document.getElementById('layout__favourites').appendChild(jokeContainer);
+  }
+
+  hoursAgo() {
+    let start = this.updated_at.split('.')[0];
+    let end = new Date();
+    let result = Math.ceil(moment(end).diff(moment(start)) / 1000 / 60 / 60);
+
+    return result;
   }
 }
