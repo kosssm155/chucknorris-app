@@ -115,7 +115,7 @@ body {
 }
 
 @media screen and (max-width: 837px) {
-  .layout__left {
+  #layout .layout__left {
     width: 100%;
   }
 
@@ -179,7 +179,7 @@ body {
     background-color: black;
     height: 100px;
     width: 100px;
-    position: absolute;
+    position: fixed;
     width: 43%;
     height: 100%;
     opacity: 0.5;
@@ -187,5 +187,15 @@ body {
   }
   .background-transparent.display {
     left: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #layout__favourites-wr {
+    width: 100%;
+  }
+
+  .background-transparent {
+    display: none;
   }
 }
