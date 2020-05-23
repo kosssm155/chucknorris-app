@@ -198,4 +198,8 @@ body {
   .background-transparent {
     display: none;
   }
+
+  .joke__category {
+    display: none;
+  }
 }
