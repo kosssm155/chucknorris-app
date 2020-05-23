@@ -5,6 +5,7 @@ import JokeFavourite from '../src/components/jokeFavourite/jokeFavourite.js';
 // import js
 import Filter from './components/filter/filter.js';
 import Button from './components/submit/submit.js';
+import open from './components/open/open.js';
 
 // root
 let layoutFilter = document.getElementById('layout__filter');

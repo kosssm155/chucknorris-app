@@ -31,7 +31,6 @@ export default class JokeFavourite {
       </p>
       <div class="joke__footer">
         <span class="joke__last-update">Last update: ${this.hoursAgo()} hours ago</span>
-        <span class="joke__category">${this.categories}</span>
       </div>
     </div>
     <div class="joke__outer">
