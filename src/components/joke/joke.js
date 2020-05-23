@@ -1,3 +1,7 @@
+// import timeSince from '../time/time.js';
+const moment = require('moment');
+moment().format();
+
 export default class Joke {
   constructor({
     categories = 'undefined',
@@ -24,12 +28,14 @@ export default class Joke {
 
     jokeContainer.innerHTML = `
     <div class="joke__inner">
-      <p class="joke__id"><span>ID:</span><a href="${this.url}" target="_blank">${this.id} <span class="joke__link-picture"></span></a></p>
+      <p class="joke__id"><span>ID:</span><a href="${this.url}" target="_blank">${
+      this.id
+    } <span class="joke__link-picture"></span></a></p>
       <p class="joke__text">
         ${this.value}
       </p>
       <div class="joke__footer">
-        <span class="joke__last-update">Last update: ${this.updated_at}</span>
+        <span class="joke__last-update">Last update: ${this.hoursAgo()} hours ago</span>
         <span class="joke__category">${this.categories}</span>
       </div>
     </div>
@@ -40,5 +46,13 @@ export default class Joke {
     `;
 
     document.getElementById('layout__jokes').appendChild(jokeContainer);
+  }
+
+  hoursAgo() {
+    let start = this.updated_at.split('.')[0];
+    let end = new Date();
+    let result = Math.ceil(moment(end).diff(moment(start)) / 1000 / 60 / 60);
+
+    return result;
   }
 }
